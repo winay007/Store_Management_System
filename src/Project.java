@@ -48,6 +48,9 @@ public class Project {
                 while (f != 2) {
                     q = l.check();
                     if (q != -1 && q!=-2) {
+                        System.out.println();
+                        System.out.print("\033[H\033[2J");  
+                        System.out.flush();          
                         System.out.println("You are logged in successfully.");
                         System.out.println("Welcome again " + l.name[q]+"\n");
                         dt.DateTime(l.user[q]);
@@ -69,6 +72,8 @@ public class Project {
                         }
                         else if(y==2)
                         {
+                            System.out.print("\033[H\033[2J");  
+                            System.out.flush();       
                             String u=s.add();
                             System.out.println("Signed up Successfully.Please Login again.");
                         }
@@ -79,25 +84,38 @@ public class Project {
                     }
                 }
                 ch=c;
-            }
+            }          
             else if (c.equals("2")) {
+                System.out.print("\033[H\033[2J");  
+                System.out.flush();       
                 String u=s.add();
                 System.out.println("Signed up Successfully.Please Login again.");
+                System.out.print("\033[H\033[2J");  
+                System.out.flush();
                 while (e != 2) {
                     q = l.check();
-                    if (q != -1) {
+                    if (q != -1) {    
+                        System.out.println();
+                        System.out.print("\033[H\033[2J");  
+                        System.out.flush();              
                         System.out.println("You are logged in successfully.");
                         System.out.println("Welcome " + l.name[q]);
+                        System.out.println();
                         dt.DateTime(l.user[q]);
                         e = 2;
                     } else {
+                        System.out.print("\033[H\033[2J");  
+                        System.out.flush();
                         System.out.println("Invalid Password or user name . Login Again.");
+                        System.out.println();
                         e = 1;
                     }
                 }
                 ch=c;
             }
             else {
+                System.out.print("\033[H\033[2J");  
+                System.out.flush();
                 ch="50000";
                 System.out.println("Invalid choice.");
             }
@@ -124,6 +142,8 @@ public class Project {
                 }
                 System.out.print("Enter your choice : ");
                 rol=scan.next();
+                System.out.print("\033[H\033[2J");  
+                System.out.flush();
                 if(rol.equals("1"))
                 {
                     sto=adm.changestock(sto);
@@ -153,9 +173,10 @@ public class Project {
         int cou=1;
         String h="1",hi;
         do {
+            System.out.println("\n\n");
             System.out.println("Do you want to change in your cart ?"+"\n"+"1 YES "+"\n"+"2 NO");
-            scan.skip("\\n");
-            hi=scan.nextLine();
+            // scan.skip("\\n");
+            hi=scan.next();
             if(hi.equals("1"))
             {
                 cart=st.Changecart(cart,price,sto1);
@@ -169,6 +190,9 @@ public class Project {
             else if(hi.equals("2"))
             {
                 cou=0;
+                System.out.println();
+                System.out.print("\033[H\033[2J");  
+                System.out.flush();          
                 System.out.println("Please visit Again.");
                 h="2";
             }
@@ -194,6 +218,9 @@ public class Project {
                         for (int i = 0; i < 9; i++) {
                             sto[i] = sto1[i] - cart[i];
                         }
+                        System.out.println();
+                        System.out.print("\033[H\033[2J");  
+                        System.out.flush();          
                         System.out.println("Your order will be deliver to following address.");
                         System.out.println(l.address[q]);
                         bu1 = "1";
@@ -208,6 +235,8 @@ public class Project {
         }
         if (bill == 0 && cou==1)
         {
+            System.out.print("\033[H\033[2J");  
+            System.out.flush();          
             System.out.println("Please visit Again.");
         }
         wasd=1;

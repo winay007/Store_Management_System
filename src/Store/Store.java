@@ -54,6 +54,8 @@ public class Store {
             }
             System.out.print("Enter your choice : ");
             cho=scan.next();
+            System.out.print("\033[H\033[2J");  
+            System.out.flush();          
             if(cho.equals("1"))
             {
                 String je="2";

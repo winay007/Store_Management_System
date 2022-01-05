@@ -9,6 +9,8 @@ public class Details extends Store {
         {
             System.out.println(e);
         }
+        System.out.print("\033[H\033[2J");  
+        System.out.flush();
         System.out.println("<<<<<<<<<<<<<<<<<<<FASHION HUB>>>>>>>>>>>>>>>>>>");
         System.out.println("------------------------------------------");
         System.out.println("-----------------JEANS--------------------");

@@ -11,6 +11,7 @@ public class Login {
     public String[] address;
     private static boolean Line;
     public int check() throws IOException {
+
         Scanner scan = new Scanner(new File("src\\Login.txt"));
         File file = new File("src\\Login.txt");
         FileInputStream fileStream = new FileInputStream(file);
@@ -29,6 +30,7 @@ public class Login {
         mobile=new String[count];
         email=new String[count];
         address=new String[count];
+        //taking data
         while(i!=count)
         {
             name[i] = scan.nextLine();
@@ -41,6 +43,8 @@ public class Login {
             i++;
         }
         i=0;
+
+        //login
         Scanner keyboard = new Scanner (System.in);
         System.out.print("Enter username : ");
         String inpUser = keyboard.nextLine();
